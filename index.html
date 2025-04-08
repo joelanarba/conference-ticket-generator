@@ -2,56 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Conference ticket generator</title>
-
- <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
 
-  <!-- Form starts -->
-   <form action=""></form>
+  <!-- Form Section -->
+  <section class="form-section">
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <p>Secure your spot at next year’s biggest coding conference.</p>
 
-  Your Journey to Coding Conf 2025 Starts Here!
+    <form id="ticketForm">
+      <!-- Avatar Upload -->
+      <label for="avatarUpload">Upload Avatar</label>
+      <div class="avatar-upload">
+        <img id="avatarPreview" src="./assets/images/avatar-default.png" alt="Avatar Preview">
+        <input type="file" id="avatarUpload" accept="image/png, image/jpeg">
+        <button type="button" id="removeImage">Remove image</button>
+        <button type="button" id="changeImage">Change image</button>
+        <p>Upload your photo (JPG or PNG, max size: 5MB).</p>
+      </div>
 
-  Secure your spot at next year's biggest coding conference.
+      <!-- Input Fields -->
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Jonatan Kristof" required>
 
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="jonatan@email.com" required>
 
-  Full Name
+      <label for="github">GitHub Username</label>
+      <input type="text" id="github" name="github" placeholder="@jonatankristof0101" required>
 
-  Email Address
-  example@email.com
+      <!-- Submit Button -->
+      <button type="submit" class="generate-btn">Generate My Ticket</button>
+    </form>
+  </section>
 
-  GitHub Username
-  @yourusername
+  <!-- Ticket Display Section -->
+  <section id="ticketSection" class="ticket-section hidden">
+    <h2>Congrats, <span id="ticketName">Jonatan Kristof</span>! Your ticket is ready.</h2>
+    <p>We've emailed your ticket to <span id="ticketEmail">jonatan@email.com</span> and will send updates in the run up to the event.</p>
 
-  Generate My Ticket
+    <div class="ticket-card">
+      <div class="ticket-header">
+        <h3>Coding Conf</h3>
+        <p>Jan 31, 2025 / Austin, TX</p>
+      </div>
+      <div class="ticket-body">
+        <img id="ticketAvatar" src="./assets/images/avatar-default.png" alt="Ticket Avatar">
+        <div class="ticket-details">
+          <h4 id="ticketFullName">Jonatan Kristof</h4>
+          <p id="ticketGithub">@jonatankristof0101</p>
+        </div>
+      </div>
+      <div class="ticket-number">#0609</div>
+    </div>
+  </section>
 
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  Congrats, <!-- Full Name -->! Your ticket is ready.
-
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
-
-  <!-- Generated tickets ends -->
-  
+  <!-- Attribution -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Joel Anarba Amuni</a>.
   </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
