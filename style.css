@@ -1,3 +1,60 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inconsolata", monospace;
+}
+
+:root {
+    /* Neutral Colors */
+    --neutral-0: hsl(0, 0%, 100%);
+    --neutral-300: hsl(252, 6%, 83%);
+    --neutral-500: hsl(245, 15%, 58%);
+    --neutral-700: hsl(245, 19%, 35%);
+    --neutral-900: hsl(248, 70%, 10%);
+
+    /* Orange Colors */
+    --orange-500: hsl(7, 88%, 67%);
+    --orange-700: hsl(7, 71%, 60%);
+
+    /* Gradient */
+    --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+}
+
+body {
+    background: url(assets/images/background-mobile.png);
+    /* background-color: var(--neutral-900); */
+    color: var(--neutral-0);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+
+.form-section h1{
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
