@@ -16,15 +16,25 @@
   <!-- Form starts -->
 <section class="form-section">
   <form action="">
-    <img src="assets/images/logo-full.svg" class="logo" alt="">
-    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-    <p>Secure your spot at next year's biggest coding conference.</p>
+    <div class="form-header">
+      <img src="assets/images/logo-full.svg" class="logo" alt="">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+    </div>
+    
 
     <div class="upload-section">
       <label for="avatar">Upload Avatar</label>
-      <input id="avatar" type="file" accept="image/png, image/jpeg" aria-describedby="uploadHint">
-      <small id="uploadHint"><img src="assets/images/icon-upload.svg" alt="">Drag and drop or click to upload</small>
-      <p><img src="assets/images/icon-info.svg" alt="">Upload your photo (JPG or PNG, max size: 500KB).</p>
+    
+      <label for="avatar" class="upload-avatar">
+        <input id="avatar" type="file" accept="image/png, image/jpeg" aria-describedby="uploadHint">
+        <small id="uploadHint">
+          <img src="assets/images/icon-upload.svg" alt=""><br>
+          Drag and drop or click to upload
+        </small>
+      </label>
+    
+      <p><img src="assets/images/icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</p>
     </div>
 
     <div class="input-group">
