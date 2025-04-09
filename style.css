@@ -27,7 +27,32 @@
 }
 
 body {
-    background: url(assets/images/background-mobile.png);
+    /* background: url(assets/images/background-mobile.png); */
+
+    background-image: 
+        url(assets/images/background-mobile.png),       
+        url(assets/images/pattern-circle.svg),                 
+        url(assets/images/pattern-lines.svg),
+        url(assets/images/pattern-squiggly-line-top.svg),
+        url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg);                 
+    background-position: 
+        center,                        
+        top left,                        
+        top,
+        top right,
+        bottom;                      
+    background-size: 
+        cover,                              
+        auto,                           
+        auto,
+        auto,
+        auto;                            
+    background-repeat: 
+        no-repeat,                        
+        no-repeat, 
+        no-repeat,
+        no-repeat,
+        no-repeat;
     /* background-color: var(--neutral-900); */
     color: var(--neutral-0);
     font-size: 20px;
@@ -40,12 +65,13 @@ label{
 }
 
 .form-section{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 20px;
+    
 }
 
 .logo {
@@ -124,7 +150,7 @@ label{
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 input[type="text"], input[type="email"] {
@@ -136,4 +162,52 @@ input[type="text"], input[type="email"] {
     background-color: var(--neutral-700);
     color: var(--neutral-0);
 }
+
+button[type="submit"] {
+    background: var(--orange-700);
+    color: var(--neutral-900);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+/*Ticket Design*/
+
+.ticket-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    
+}
+
+.ticket-section h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.ticket-section h2 span {
+    background: var(--gradient-text); 
+    -webkit-background-clip: text;   
+    background-clip: text; 
+    color: transparent;  
+}
+
+.ticket-section p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--neutral-300);
+}
+
+#ticket
 
