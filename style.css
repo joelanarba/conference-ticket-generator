@@ -27,35 +27,40 @@
 }
 
 body {
-    /* background: url(assets/images/background-mobile.png); */
-
-    background-image: 
-        url(assets/images/background-mobile.png),       
-        url(assets/images/pattern-circle.svg),                 
-        url(assets/images/pattern-lines.svg),
-        url(assets/images/pattern-squiggly-line-top.svg),
-        url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg);                 
-    background-position: 
-        center,                        
-        top left,                        
-        top,
-        top right,
-        bottom;                      
-    background-size: 
-        cover,                              
-        auto,                           
-        auto,
-        auto,
-        auto;                            
-    background-repeat: 
-        no-repeat,                        
-        no-repeat, 
-        no-repeat,
-        no-repeat,
-        no-repeat;
+    background: url(assets/images/background-mobile.png);             
+    
     /* background-color: var(--neutral-900); */
     color: var(--neutral-0);
     font-size: 20px;
+}
+
+.svg-image {
+	position: absolute;
+
+	img {
+		width: 100%;
+	}
+
+	&:nth-child(1) {
+		width: 100%;
+		
+	}
+	&:nth-child(2) {
+		top: 100px;
+		right: 0;
+	}
+	&:nth-child(3) {
+		left: 0;
+		bottom: 0;
+	}
+	&:nth-child(4) {
+		top: -100px;
+		left: 100px;
+	}
+	&:nth-child(5) {
+		top: 50%;
+		right: 350px;
+	}
 }
 
 label{
