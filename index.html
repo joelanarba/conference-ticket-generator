@@ -49,7 +49,7 @@
             </small>
           </label>
         
-          <p><img src="assets/images/icon-info.svg" class="info" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</p>
+          <p id="uploadError"><img src="assets/images/icon-info.svg" class="info" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>
 
         <div class="input-group">
@@ -67,7 +67,7 @@
           <input type="text" id="github" placeholder="@yourusername" aria-required="true">
         </div>
 
-        <button type="submit" onclick="generateTicket()">Generate My Ticket</button>
+        <button type="submit" onclick="generateTicket(event)">Generate My Ticket</button>
       </form>
 
     </section>

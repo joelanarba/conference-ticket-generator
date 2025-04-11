@@ -52,8 +52,9 @@ body {
 		right: 0;
 	}
 	&:nth-child(3) {
-		left: -10px;
-		bottom: -50px;
+        width: 100px;
+		left: 0px;
+		bottom: 0px;
 	}
 	&:nth-child(4) {
         width: 150px;
@@ -74,7 +75,7 @@ label{
 }
 
 .form-section{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -189,7 +190,8 @@ button[type="submit"] {
 /*Ticket Design*/
 
 .ticket-section{
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -305,4 +307,9 @@ button[type="submit"] {
     right: -42%; 
     top: 100%;
     transform: rotate(90deg) ;
+}
+
+#uploadError.error{
+    color: rgb(221, 81, 81);
+    filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(1460%) hue-rotate(340deg) brightness(92%) contrast(92%);
 }
