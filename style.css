@@ -162,6 +162,7 @@ label{
     width: 100%;
     max-width: 400px;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 input[type="text"], input[type="email"] {
@@ -312,4 +313,18 @@ button[type="submit"] {
 #uploadError.error{
     color: rgb(221, 81, 81);
     filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(1460%) hue-rotate(340deg) brightness(92%) contrast(92%);
+}
+
+.name-error,
+.email-error,
+.userName-error {
+    display: block;
+    color: red; /* or your preferred error color */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.error{
+    color: rgb(221, 81, 81);
+    font-size: 12px;
 }
