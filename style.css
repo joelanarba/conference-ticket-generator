@@ -139,8 +139,8 @@ label{
 }
 
 .upload-section p{
-    font-size: 10px;
-    color: var(--neutral-300);
+    font-size: 12px;
+    /* color: var(--neutral-300); */
     
 }
 
@@ -154,6 +154,7 @@ label{
 .info{
     width: 10px;
     margin-top: 5px;
+    
 }
 
 .input-group {
@@ -191,8 +192,8 @@ button[type="submit"] {
 /*Ticket Design*/
 
 .ticket-section{
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -310,21 +311,44 @@ button[type="submit"] {
     transform: rotate(90deg) ;
 }
 
-#uploadError.error{
+/* #uploadError.error{
     color: rgb(221, 81, 81);
     filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(1460%) hue-rotate(340deg) brightness(92%) contrast(92%);
-}
-
-.name-error,
-.email-error,
-.userName-error {
-    display: block;
-    color: red; /* or your preferred error color */
-    font-size: 0.9rem;
-    margin-top: 5px;
-}
+} */
 
 .error{
     color: rgb(221, 81, 81);
     font-size: 12px;
+    margin-top: 5px;
+}
+
+.upload-btn {
+    background: var(--neutral-700);
+    color: var(--neutral-0);
+    border: 1px solid var(--neutral-500);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: var(--neutral-500);
+}
+
+#previewContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#uploadActions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }

@@ -49,6 +49,11 @@
               <img src="assets/images/icon-upload.svg" alt=""><br>
               Drag and drop or click to upload
             </small>
+            <div id="previewContainer" style="display: none; flex-direction: column; align-items: center; width: 100%;"></div>
+            <div id="uploadActions" style="display: none; justify-content: center; gap: 10px; width: 100%;">
+              <button id="removeImageBtn" type="button" class="upload-btn">Remove Image</button>
+              <button id="changeImageBtn" type="button" class="upload-btn">Change Image</button>
+            </div>
           </label>
         
           <p id="uploadError"><img src="assets/images/icon-info.svg" class="info" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</p>
@@ -57,22 +62,22 @@
         <div class="input-group">
           <label for="fullName">Full Name</label>
           <input type="text" id="fullName" aria-required="true">
-          <span id="name-error"></span>
+          <span id="fullNameError"></span>
         </div>
 
         <div class="input-group">
           <label for="email">Email Address</label>
           <input type="email" id="email" placeholder="example@email.com" aria-required="true">
-          <p class="email-error"></p>
+          <span id="emailError"></span>
         </div>
 
         <div class="input-group">
           <label for="github">GitHub Username</label>
-          <input type="text" id="github" placeholder="@yourusername" aria-required="true">
-          <p class="userName-error"></p>
+          <input type="text" id="userName" placeholder="@yourusername" aria-required="true">
+          <span id="userNameError"></span>
         </div>
 
-        <button type="submit" onclick="generateTicket(event)">Generate My Ticket</button>
+        <button id="submitBtn" type="submit"> Generate My Ticket</button>
       </form>
 
     </section>
