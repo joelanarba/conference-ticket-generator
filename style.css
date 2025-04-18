@@ -36,6 +36,11 @@ body {
 }
 
 .svg-image {
+    position: absolute;
+    z-index: -1; /* Keep SVGs behind content */
+}
+
+.svg-image {
 	position: absolute;
 
 	img {
@@ -81,6 +86,8 @@ label{
     align-items: center;
     /* height: 100vh; */
     padding: 20px;
+    position: relative;
+    z-index: 1;
 
     
 }
@@ -219,6 +226,8 @@ button[type="submit"] {
     align-items: center;
     height: 100vh;
     padding: 20px;
+    position: relative;
+    z-index: 1;
     
 }
 
