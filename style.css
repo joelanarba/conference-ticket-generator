@@ -384,6 +384,17 @@ button[type="submit"] {
     margin-top: 10px;
 }
 
+
+.form-header{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.form-input{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 /* Media Queries for Responsive Design */
 /* Tablet Styles */
 @media (min-width: 600px){
