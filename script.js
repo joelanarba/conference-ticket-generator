@@ -1,4 +1,6 @@
 const formElement = document.querySelector('form');
+const formSection = document.querySelector('.form-section');
+const ticketSection = document.querySelector('.ticket-section');
 const uploadHint = document.getElementById('uploadHint');
 const avatar = document.getElementById('avatar');
 const uploadError = document.getElementById('uploadError');
@@ -21,6 +23,11 @@ const previewContainer = document.getElementById('previewContainer');
 const uploadActions = document.getElementById('uploadActions');
 const removeImageBtn = document.getElementById('removeImageBtn');
 const changeImageBtn = document.getElementById('changeImageBtn');
+
+// Hide ticket section by default when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+  ticketSection.style.display = 'none';
+});
 
 const validateFileType = (file) => {
   const allowedTypes = ['image/jpeg', 'image/png'];
@@ -67,7 +74,7 @@ function displayImagePreview(file) {
     previewImg.style.maxWidth = '100%';
     previewImg.style.maxHeight = '150px';
     previewImg.style.borderRadius = '8px';
-    previewImg.style.marginBottom = '5px';
+    previewImg.style.marginBottom = '10px';
     previewContainer.appendChild(previewImg);
   }
   
@@ -106,6 +113,12 @@ function resetUploadArea() {
   
   uploadError.textContent = '';
   uploadError.classList.remove('error');
+}
+
+// Toggle visibility between form and ticket sections
+function showTicketSection() {
+  formSection.style.display = 'none';
+  ticketSection.style.display = 'flex'; // Using flex to match your original CSS
 }
 
 submitButton.addEventListener('click', (e) => {
@@ -174,6 +187,7 @@ submitButton.addEventListener('click', (e) => {
 
   if (isValid) {
     generateTicket(file);
+    showTicketSection(); // Show ticket section if validation passes
   }
 });
 
@@ -192,9 +206,6 @@ function generateTicket(file) {
     };
     reader.readAsDataURL(file);
   }
-
-  // Optionally scroll to ticket or show it (if you're hiding it initially)
-  // document.querySelector('.ticket-section').scrollIntoView({ behavior: 'smooth' });
 }
 
 // Handle file selection
