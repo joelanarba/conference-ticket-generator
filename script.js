@@ -67,7 +67,7 @@ function displayImagePreview(file) {
     previewImg.style.maxWidth = '100%';
     previewImg.style.maxHeight = '150px';
     previewImg.style.borderRadius = '8px';
-    previewImg.style.marginBottom = '10px';
+    previewImg.style.marginBottom = '5px';
     previewContainer.appendChild(previewImg);
   }
   

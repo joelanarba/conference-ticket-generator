@@ -328,8 +328,9 @@ button[type="submit"] {
     border: 1px solid var(--neutral-500);
     padding: 8px 12px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
+    text-decoration: underline;
     transition: background 0.3s ease;
 }
 
