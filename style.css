@@ -452,8 +452,30 @@ button[type="submit"] {
     }
     
     .form-input{
-        max-width: 50%;
+        max-width: 70%;
         margin: 0 auto;
+    }
+
+    .upload-avatar,
+    .input-group{
+        max-width: 100%;
+    }
+
+    .upload-avatar{
+        
+    }
+
+    input[type="text"], input[type="email"], button[type="submit"] {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .upload-avatar img{
+        width: 70px;
+    }
+
+    .upload-section p{
+        font-size: 16px;
     }
     /* .form-section {
         padding: 40px;
@@ -468,4 +490,86 @@ button[type="submit"] {
         width: 100px;
     } */
 
+}
+
+@media (min-width: 1024px) {
+    body {
+        background: url(assets/images/background-desktop.png); 
+        /* background-size: cover;
+        background-position: center; */
+    }
+
+    .svg-image {
+        position: absolute;
+    
+        img {
+            width: 100%;
+        }
+    
+        &:nth-child(1) {
+            width: 100%;
+            
+        }
+        &:nth-child(2) {
+            width: 40%;
+            top: 10px;
+            right: 0;
+        }
+        &:nth-child(3) {
+            width: 80%;
+            left: 0px;
+            bottom: 0px;
+        }
+        &:nth-child(4) {
+            width: 150px;
+            top: -50px;
+            left: -10px;
+        }
+        &:nth-child(5) {
+            
+            top: 50%;
+            right: 50px;
+        }
+    }
+
+    .form-section{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .form-section h1{
+        font-size: 32px;
+    }
+
+    .form-header{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .upload-avatar,
+    .input-group{
+        max-width: 100%;
+    }
+
+    .upload-avatar{
+        height: 200px;
+    }
+
+    input[type="text"], input[type="email"], button[type="submit"] {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .upload-avatar img{
+        width: 70px;
+    }
+
+    .upload-section p{
+        font-size: 16px;
+    }
+    
+    .form-input{
+        max-width: 60%;
+        margin: 0 auto;
+    }
 }
