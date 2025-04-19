@@ -466,7 +466,7 @@ button[type="submit"] {
     }
 
     input[type="text"], input[type="email"], button[type="submit"] {
-        height: 60px;
+        height: 50px;
         font-size: 20px;
     }
 
@@ -517,8 +517,8 @@ button[type="submit"] {
         }
         &:nth-child(3) {
             width: 80%;
-            left: 0px;
-            bottom: 0px;
+            left: 0%;
+            bottom: -50%;
         }
         &:nth-child(4) {
             width: 150px;
