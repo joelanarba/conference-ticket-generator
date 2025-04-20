@@ -262,17 +262,23 @@ button[type="submit"] {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     gap: 20px;
-	background-color: var(--color-neutral-900);
-	background-image: url('assets/images/pattern-ticket.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	aspect-ratio: 16 / 9;
-	max-width: 100%;
-	/* margin: auto; */
-	padding: 10px;
-	position: relative;
-	border-radius: 8px;
-    
+    background-color: var(--neutral-900); /* Explicitly set background color */
+    background-image: url('assets/images/pattern-ticket.svg'); /* Fixed path without '../' */
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-for-download {
+    background-color: var(--neutral-900);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .ticket-header{
@@ -655,7 +661,7 @@ button[type="submit"] {
     height: 18px;
     margin-right: 8px;
     fill: var(--neutral-0);
-    
+
 }
 
 /* For mobile responsiveness */

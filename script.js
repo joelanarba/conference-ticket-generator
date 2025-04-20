@@ -259,6 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to download the ticket as an image
+// Updated download function to properly capture background colors
 function downloadTicket() {
   const ticketElement = document.querySelector('.ticket');
   
@@ -268,13 +269,62 @@ function downloadTicket() {
   downloadBtn.textContent = 'Generating...';
   downloadBtn.disabled = true;
   
-  // Use html2canvas to capture the ticket as an image
-  html2canvas(ticketElement, {
-    backgroundColor: null,
+  // Create a clone of the ticket in a temporary container to preserve styling
+  const tempContainer = document.createElement('div');
+  tempContainer.style.position = 'absolute';
+  tempContainer.style.left = '-9999px';
+  tempContainer.style.top = '-9999px';
+  
+  // Clone the ticket into our temporary container
+  const ticketClone = ticketElement.cloneNode(true);
+  
+  // Explicitly set the background styles that might be inherited
+  ticketClone.style.backgroundColor = 'var(--neutral-900)';
+  ticketClone.style.backgroundImage = 'url("assets/images/pattern-ticket.svg")';
+  ticketClone.style.backgroundSize = 'contain';
+  ticketClone.style.backgroundRepeat = 'no-repeat';
+  ticketClone.style.borderRadius = '8px';
+  ticketClone.style.padding = '20px';
+  ticketClone.style.width = ticketElement.offsetWidth + 'px';
+  ticketClone.style.height = ticketElement.offsetHeight + 'px';
+  ticketClone.style.display = 'grid';
+  ticketClone.style.gap = '20px';
+  
+  // Apply additional styles to ensure all backgrounds are captured
+  ticketClone.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+  
+  // Add a surrounding container with proper background
+  const backgroundContainer = document.createElement('div');
+  backgroundContainer.style.backgroundColor = 'var(--neutral-900)';
+  backgroundContainer.style.padding = '20px';
+  backgroundContainer.style.borderRadius = '12px';
+  backgroundContainer.style.width = (ticketElement.offsetWidth + 40) + 'px'; // Add padding to width
+  backgroundContainer.style.height = (ticketElement.offsetHeight + 40) + 'px'; // Add padding to height
+  
+  // Add the ticket to the background container
+  backgroundContainer.appendChild(ticketClone);
+  
+  // Add the container to our temp element
+  tempContainer.appendChild(backgroundContainer);
+  
+  // Add the temp container to the document
+  document.body.appendChild(tempContainer);
+  
+  // Use html2canvas with the explicit background color
+  html2canvas(backgroundContainer, {
+    backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--neutral-900').trim() || '#0E0933',
     scale: 2, // Higher quality
     logging: false,
     allowTaint: true,
-    useCORS: true
+    useCORS: true,
+    onclone: function(clonedDoc) {
+      // We can perform additional modifications to the cloned document if needed
+      const clonedTicket = clonedDoc.querySelector('.ticket');
+      if (clonedTicket) {
+        // Force background to be visible
+        clonedTicket.style.backgroundColor = 'var(--neutral-900)';
+      }
+    }
   }).then(canvas => {
     // Convert canvas to blob
     canvas.toBlob(function(blob) {
@@ -296,12 +346,21 @@ function downloadTicket() {
       // Release object URL
       setTimeout(() => URL.revokeObjectURL(url), 100);
       
+      // Clean up the temporary container
+      document.body.removeChild(tempContainer);
+      
       // Reset button state
       downloadBtn.textContent = originalText;
       downloadBtn.disabled = false;
     });
   }).catch(error => {
     console.error('Error generating ticket image:', error);
+    
+    // Clean up the temporary container even on error
+    if (document.body.contains(tempContainer)) {
+      document.body.removeChild(tempContainer);
+    }
+    
     downloadBtn.textContent = originalText;
     downloadBtn.disabled = false;
     alert('There was an error generating your ticket. Please try again.');
