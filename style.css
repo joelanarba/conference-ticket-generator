@@ -263,7 +263,7 @@ button[type="submit"] {
     grid-auto-rows: auto;
     gap: 20px;
 	background-color: var(--color-neutral-900);
-	background-image: url('../assets/images/pattern-ticket.svg');
+	background-image: url('assets/images/pattern-ticket.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	aspect-ratio: 16 / 9;
