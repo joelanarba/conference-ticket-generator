@@ -241,3 +241,69 @@ if (changeImageBtn) {
 
 // Initialize the upload area state
 resetUploadArea();
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Create script element for html2canvas
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+  script.async = true;
+  document.head.appendChild(script);
+  
+  // Once html2canvas is loaded, initialize the download functionality
+  script.onload = function() {
+    const downloadBtn = document.getElementById('downloadTicketBtn');
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', downloadTicket);
+    }
+  };
+});
+
+// Function to download the ticket as an image
+function downloadTicket() {
+  const ticketElement = document.querySelector('.ticket');
+  
+  // Show loading state
+  const downloadBtn = document.getElementById('downloadTicketBtn');
+  const originalText = downloadBtn.textContent;
+  downloadBtn.textContent = 'Generating...';
+  downloadBtn.disabled = true;
+  
+  // Use html2canvas to capture the ticket as an image
+  html2canvas(ticketElement, {
+    backgroundColor: null,
+    scale: 2, // Higher quality
+    logging: false,
+    allowTaint: true,
+    useCORS: true
+  }).then(canvas => {
+    // Convert canvas to blob
+    canvas.toBlob(function(blob) {
+      // Create a download link
+      const url = URL.createObjectURL(blob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = url;
+      
+      // Generate filename with user's name (sanitized)
+      const userName = document.getElementById('ticketName').textContent.trim();
+      const safeUserName = userName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+      downloadLink.download = `coding_conf_ticket_${safeUserName}.png`;
+      
+      // Trigger download
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      
+      // Release object URL
+      setTimeout(() => URL.revokeObjectURL(url), 100);
+      
+      // Reset button state
+      downloadBtn.textContent = originalText;
+      downloadBtn.disabled = false;
+    });
+  }).catch(error => {
+    console.error('Error generating ticket image:', error);
+    downloadBtn.textContent = originalText;
+    downloadBtn.disabled = false;
+    alert('There was an error generating your ticket. Please try again.');
+  });
+}

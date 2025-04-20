@@ -619,3 +619,49 @@ button[type="submit"] {
         color: var(--neutral-300);
     }
 }
+
+
+/* Add this to your CSS file */
+.download-btn {
+    background: var(--orange-700);
+    color: var(--neutral-0);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background: var(--orange-500);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    fill: var(--neutral-0);
+    
+}
+
+/* For mobile responsiveness */
+@media (max-width: 600px) {
+    .download-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    }
+}
