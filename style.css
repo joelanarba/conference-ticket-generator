@@ -606,4 +606,16 @@ button[type="submit"] {
         top: 200%;
         transform: rotate(90deg) ;
     }
+
+    .ticket-section h2{
+        font-size: 42px;
+        
+    }
+
+    .confirm{
+        /* font-size: 20px; */
+        margin-bottom: 70px;
+        text-align: center;
+        color: var(--neutral-300);
+    }
 }
