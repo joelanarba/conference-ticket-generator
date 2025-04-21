@@ -18,7 +18,6 @@ const ticketAvatar = document.getElementById('ticketAvatar');
 const ticketHandle = document.getElementById('ticketHandle');
 const ticketNameDisplay = document.getElementById('ticketName');
 
-// New elements for image preview functionality
 const previewContainer = document.getElementById('previewContainer');
 const uploadActions = document.getElementById('uploadActions');
 const removeImageBtn = document.getElementById('removeImageBtn');
@@ -67,7 +66,7 @@ const validateFile = (file) => {
 function displayImagePreview(file) {
   if (!previewContainer) return;
   
-  // Create image preview if it doesn't exist
+
   if (!previewContainer.querySelector('img')) {
     const previewImg = document.createElement('img');
     previewImg.id = 'imagePreview';
@@ -118,7 +117,7 @@ function resetUploadArea() {
 // Toggle visibility between form and ticket sections
 function showTicketSection() {
   formSection.style.display = 'none';
-  ticketSection.style.display = 'flex'; // Using flex to match your original CSS
+  ticketSection.style.display = 'flex'; 
 }
 
 submitButton.addEventListener('click', (e) => {
@@ -249,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
   script.async = true;
   document.head.appendChild(script);
   
-  // Once html2canvas is loaded, initialize the download functionality
+  // Initializing the download functionality once html2canvas is loaded
   script.onload = function() {
     const downloadBtn = document.getElementById('downloadTicketBtn');
     if (downloadBtn) {
@@ -259,7 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to download the ticket as an image
-// Updated download function to properly capture background colors
 function downloadTicket() {
   const ticketElement = document.querySelector('.ticket');
   
@@ -269,16 +267,14 @@ function downloadTicket() {
   downloadBtn.textContent = 'Generating...';
   downloadBtn.disabled = true;
   
-  // Create a clone of the ticket in a temporary container to preserve styling
   const tempContainer = document.createElement('div');
   tempContainer.style.position = 'absolute';
   tempContainer.style.left = '-9999px';
   tempContainer.style.top = '-9999px';
   
-  // Clone the ticket into our temporary container
   const ticketClone = ticketElement.cloneNode(true);
   
-  // Explicitly set the background styles that might be inherited
+
   ticketClone.style.backgroundColor = 'var(--neutral-900)';
   ticketClone.style.backgroundImage = 'url("assets/images/pattern-ticket.svg")';
   ticketClone.style.backgroundSize = 'contain';
@@ -313,12 +309,12 @@ function downloadTicket() {
   // Use html2canvas with the explicit background color
   html2canvas(backgroundContainer, {
     backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--neutral-900').trim() || '#0E0933',
-    scale: 2, // Higher quality
+    scale: 2, 
     logging: false,
     allowTaint: true,
     useCORS: true,
     onclone: function(clonedDoc) {
-      // We can perform additional modifications to the cloned document if needed
+
       const clonedTicket = clonedDoc.querySelector('.ticket');
       if (clonedTicket) {
         // Force background to be visible
