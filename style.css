@@ -307,6 +307,7 @@ button[type="submit"] {
     align-items: center;
     gap: 10px;
     line-height: 0.5;
+    overflow: hidden;
     
     
 }
@@ -332,7 +333,7 @@ button[type="submit"] {
     width: 50px;
     border-radius: 8px;
     background-color: var(--neutral-900);
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .ticket-number{
