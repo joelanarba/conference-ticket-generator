@@ -347,6 +347,30 @@ button[type="submit"] {
     transform: rotate(90deg) ;
 }
 
+
+#uploadError {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+   
+    /* max-width: 400px; */
+    margin-top: 8px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+#uploadError img.info {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* #uploadError {
+    color: rgb(221, 81, 81);
+} */
 /* #uploadError.error{
     color: rgb(221, 81, 81);
     filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(1460%) hue-rotate(340deg) brightness(92%) contrast(92%);
@@ -485,7 +509,7 @@ button[type="submit"] {
         width: 70px;
     }
 
-    .upload-section p{
+    .upload-section span{
         font-size: 16px;
     }
 
@@ -586,7 +610,7 @@ button[type="submit"] {
         width: 70px;
     }
 
-    .upload-section p{
+    .upload-section span{
         font-size: 16px;
     }
     
@@ -627,7 +651,6 @@ button[type="submit"] {
 }
 
 
-/* Add this to your CSS file */
 .download-btn {
     background: var(--orange-700);
     color: var(--neutral-0);
@@ -664,7 +687,7 @@ button[type="submit"] {
 
 }
 
-/* For mobile responsiveness */
+
 @media (max-width: 600px) {
     .download-btn {
     padding: 10px 16px;
