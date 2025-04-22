@@ -1,372 +1,382 @@
-.attribution { font-size: 11px; text-align: center; margin-bottom: 0px; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Inconsolata", monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
 }
 
 :root {
-    /* Neutral Colors */
-    --neutral-0: hsl(0, 0%, 100%);
-    --neutral-300: hsl(252, 6%, 83%);
-    --neutral-500: hsl(245, 15%, 58%);
-    --neutral-700: hsl(245, 19%, 35%);
-    --neutral-900: hsl(248, 70%, 10%);
+  /* Neutral Colors */
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
 
-    /* Orange Colors */
-    --orange-500: hsl(7, 88%, 67%);
-    --orange-700: hsl(7, 71%, 60%);
+  /* Orange Colors */
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
 
-    /* Gradient */
-    --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  /* Gradient */
+  --gradient-text: linear-gradient(
+    to right,
+    hsl(7, 86%, 67%),
+    hsl(0, 0%, 100%)
+  );
 }
 
 body {
-    background: url(assets/images/background-mobile.png);             
-    
-    /* background-color: var(--neutral-900); */
-    color: var(--neutral-0);
-    font-size: 20px;
-    margin-top: 20px;
+  background: url(assets/images/background-mobile.png);
+
+  /* background-color: var(--neutral-900); */
+  color: var(--neutral-0);
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .svg-image {
-    position: absolute;
-    z-index: -1; /* Keep SVGs behind content */
+  position: absolute;
+  z-index: -1; /* Keep SVGs behind content */
 }
 
 .svg-image {
-	position: absolute;
+  position: absolute;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 
-	&:nth-child(1) {
-		width: 100%;
-		
-	}
-	&:nth-child(2) {
-        width: 40%;
-		top: 10px;
-		right: 0;
-	}
-	&:nth-child(3) {
-        width: 100px;
-		left: 0px;
-		bottom: 0px;
-	}
-	&:nth-child(4) {
-        width: 150px;
-		top: -50px;
-		left: -10px;
-	}
-	&:nth-child(5) {
-        
-		top: 50%;
-		right: 350px;
-	}
+  &:nth-child(1) {
+    width: 100%;
+  }
+  &:nth-child(2) {
+    width: 40%;
+    top: 10px;
+    right: 0;
+  }
+  &:nth-child(3) {
+    width: 100px;
+    left: 0px;
+    bottom: 0px;
+  }
+  &:nth-child(4) {
+    width: 150px;
+    top: -50px;
+    left: -10px;
+  }
+  &:nth-child(5) {
+    top: 50%;
+    right: 350px;
+  }
 }
 
-label{
-    font-size: 16px;
-    color: var(--neutral-100);
-    margin-bottom: 5px;
+label {
+  font-size: 16px;
+  color: var(--neutral-100);
+  margin-bottom: 5px;
 }
 
-.form-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-
-    
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
-    display: block;
-    margin: 0 auto;
-    width: 150px;
-    margin-bottom: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  margin-bottom: 20px;
 }
 
-.form-section h1{
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 26px;
+.form-section h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
 }
 
-.form-header p{
-    font-size: 16px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: var(--neutral-300);
-    margin-bottom: 20px;
+.form-header p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--neutral-300);
+  margin-bottom: 20px;
 }
 
 .upload-section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    line-height: 2;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  line-height: 2;
+  margin-bottom: 20px;
 }
 
-
-
-.upload-avatar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    background-color: var(--neutral-900);
-    border: 2px dashed var(--neutral-500);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    color: var(--neutral-500);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.upload-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--neutral-900);
+  border: 2px dashed var(--neutral-500);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: var(--neutral-500);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.upload-avatar:hover{
-    background-color: var(--neutral-700);
-    border-color: var(--neutral-300);
+.upload-avatar:hover {
+  background-color: var(--neutral-700);
+  border-color: var(--neutral-300);
 }
-.upload-avatar:hover p{
-    color: var(--neutral-0);
-}
-
-.upload-avatar input[type="file"]{
-    display: none;
+.upload-avatar:hover p {
+  color: var(--neutral-0);
 }
 
-.upload-section p{
-    font-size: 12px;
-    /* color: var(--neutral-300); */
-    
+.upload-avatar input[type="file"] {
+  display: none;
 }
 
-.upload-avatar img{
-    width: 50px;
-    border-radius: 8px;
-    background-color: var(--neutral-700);
-    object-fit: cover;
+.upload-section p {
+  font-size: 12px;
+  /* color: var(--neutral-300); */
 }
 
-.info{
-    width: 10px;
-    margin-top: 5px;
-    
+.upload-avatar img {
+  width: 50px;
+  border-radius: 8px;
+  background-color: var(--neutral-700);
+  object-fit: cover;
+}
+
+.info {
+  width: 10px;
+  margin-top: 5px;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid var(--neutral-300);
-    border-radius: 8px;
-    background-color: var(--neutral-900);
-    color: var(--neutral-0);
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 8px;
+  background-color: var(--neutral-900);
+  color: var(--neutral-0);
 }
 
-input[type="text"]:focus, input[type="email"]:focus {
-    outline: 2px solid var(--neutral-500);
-    border-color: var(--neutral-0);
-    background-color: var(--neutral-700);
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: 2px solid var(--neutral-500);
+  border-color: var(--neutral-0);
+  background-color: var(--neutral-700);
 }
 
-input[type="text"]:hover, input[type="email"]:hover {
-    background-color: var(--neutral-700);
-    color: var(--neutral-300);
-    cursor: pointer;
+input[type="text"]:hover,
+input[type="email"]:hover {
+  background-color: var(--neutral-700);
+  color: var(--neutral-300);
+  cursor: pointer;
 }
 
 button[type="submit"] {
-    background: var(--orange-700);
-    color: var(--neutral-900);
-    border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    transition: background 0.3s ease;
-    font-weight: bold;
+  background: var(--orange-700);
+  color: var(--neutral-900);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+  font-weight: bold;
 }
 
 /*Ticket Design*/
 
-.ticket-section{
-    display: flex;
-    /* display: none; */
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-    
+.ticket-section {
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.ticket-section h2{
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 26px;
+.ticket-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
 }
 
 .ticket-section h2 span {
-    background: var(--gradient-text); 
-    -webkit-background-clip: text;   
-    background-clip: text; 
-    color: transparent;  
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .confirm {
-    font-size: 16px;
-    margin-bottom: 70px;
-    text-align: center;
-    color: var(--neutral-300);
+  font-size: 16px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: var(--neutral-300);
 }
 
-#ticket-email{
-    color: var(--orange-700);
+#ticket-email {
+  color: var(--orange-700);
 }
 
 .ticket {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 20px;
-    background-color: var(--neutral-900); /* Explicitly set background color */
-    background-image: url('assets/images/pattern-ticket.svg'); /* Fixed path without '../' */
-    background-size: contain;
-    background-repeat: no-repeat;
-    aspect-ratio: 16 / 9;
-    max-width: 100%;
-    padding: 20px;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  background-color: var(--neutral-900); /* Explicitly set background color */
+  background-image: url("assets/images/pattern-ticket.svg"); /* Fixed path without '../' */
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .ticket-for-download {
-    background-color: var(--neutral-900);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: var(--neutral-900);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.ticket-header{
-    display: flex;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+.ticket-header {
+  display: flex;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.ticket-header img{
-    
-    width: 30px;
-    object-fit: cover;
+.ticket-header img {
+  width: 30px;
+  object-fit: cover;
 }
 
-.ticket-header p{
-    font-size: 12px;
-    color: var(--neutral-300);
+.ticket-header p {
+  font-size: 12px;
+  color: var(--neutral-300);
 }
 
-.ticket-user{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    line-height: 0.5;
-    /* overflow: hidden; */
-    
-    
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 0.5;
+  /* overflow: hidden; */
 }
 
-#ticketName{
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--neutral-0);
+.avatar-container {
+  width: 50px;
+  height: 50px;
+  
+
+  overflow: hidden;
 }
 
-#ticketHandle{
-    font-size: 12px;
-    color: var(--neutral-300);
-    align-items: center;
-    display: flex;
+#ticketName {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--neutral-0);
 }
 
-#ticketHandle img{
-    width: 20px;
+#ticketHandle {
+  font-size: 12px;
+  color: var(--neutral-300);
+  align-items: center;
+  display: flex;
 }
 
-#ticketAvatar{
-    width: 50px;
-    border-radius: 8px;
-    background-color: var(--neutral-900);
-    object-fit: cover;
+#ticketHandle img {
+  width: 20px;
 }
 
-.ticket-number{
-    color: var(--neutral-500);
-    font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    align-items: center;
-    display: flex;
-    right: -42%; 
-    top: 100%;
-    transform: rotate(90deg) ;
+#ticketAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--neutral-900);
+  object-fit: cover;
+  margin-bottom: 5px;
 }
 
+.ticket-number {
+  color: var(--neutral-500);
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  align-items: center;
+  display: flex;
+  right: -42%;
+  top: 100%;
+  transform: rotate(90deg);
+}
 
 #uploadError {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    width: 100%;
-   
-    /* max-width: 400px; */
-    margin-top: 8px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    font-size: 12px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+
+  /* max-width: 400px; */
+  margin-top: 8px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 12px;
 }
 
 #uploadError img.info {
-    width: 15px;
-    height: 15px;
-    margin-right: 8px;
-    vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* #uploadError {
@@ -377,154 +387,159 @@ button[type="submit"] {
     filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(1460%) hue-rotate(340deg) brightness(92%) contrast(92%);
 } */
 
-.error{
-    color: rgb(221, 81, 81);
-    font-size: 12px;
-    margin-top: 5px;
+.error {
+  color: rgb(221, 81, 81);
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .upload-btn {
-    background: var(--neutral-700);
-    color: var(--neutral-0);
-    border: 1px solid var(--neutral-500);
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    cursor: pointer;
-    text-decoration: underline;
-    transition: background 0.3s ease;
+  background: var(--neutral-700);
+  color: var(--neutral-0);
+  border: 1px solid var(--neutral-500);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: background 0.3s ease;
 }
 
 .upload-btn:hover {
-    background: var(--neutral-500);
+  background: var(--neutral-500);
 }
 
 #previewContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 #uploadActions {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-
-.form-header{
-    max-width: 100%;
-    margin: 0 auto;
+.form-header {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.form-input{
-    max-width: 90%;
-    margin: 0 auto;
+.form-input {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* Media Queries for Responsive Design */
 /* Tablet Styles */
-@media (min-width: 600px){
-    body {
-        background: url(assets/images/background-tablet.png); 
-        /* background-size: cover;
+@media (min-width: 600px) {
+  body {
+    background: url(assets/images/background-tablet.png);
+    /* background-size: cover;
         background-position: center; */
+  }
+
+  .svg-image {
+    position: absolute;
+
+    img {
+      width: 100%;
     }
 
-    .svg-image {
-        position: absolute;
-    
-        img {
-            width: 100%;
-        }
-    
-        &:nth-child(1) {
-            width: 100%;
-            
-        }
-        &:nth-child(2) {
-            width: 40%;
-            top: 10px;
-            right: 0;
-        }
-        &:nth-child(3) {
-            width: 50%;
-            left: 0px;
-            bottom: 0px;
-        }
-        &:nth-child(4) {
-            width: 150px;
-            top: -50px;
-            left: -10px;
-        }
-        &:nth-child(5) {
-            width: 150px;
-            top: 20%;
-            right: 50px;
-        }
+    &:nth-child(1) {
+      width: 100%;
     }
+    &:nth-child(2) {
+      width: 40%;
+      top: 10px;
+      right: 0;
+    }
+    &:nth-child(3) {
+      width: 50%;
+      left: 0px;
+      bottom: 0px;
+    }
+    &:nth-child(4) {
+      width: 150px;
+      top: -50px;
+      left: -10px;
+    }
+    &:nth-child(5) {
+      width: 150px;
+      top: 20%;
+      right: 50px;
+    }
+  }
 
-    .form-section{
-        max-width: 100%;
-        margin: 0 auto;
-    }
+  .form-section {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
-    .form-section h1, .ticket-section h2{
-        font-size: 32px;
-    }
+  .form-section h1,
+  .ticket-section h2 {
+    font-size: 32px;
+  }
 
-    .form-header{
-        max-width: 80%;
-        margin: 0 auto;
-    }
-    
-    .form-input{
-        max-width: 70%;
-        margin: 0 auto;
-    }
+  .form-header {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-    .ticket-title{
-        max-width: 70%;
-        margin: 0 auto;
-    }
+  .form-input {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 
-    .upload-avatar,
-    .input-group{
-        max-width: 100%;
-    }
+  #ticketAvatar {
+    max-width: 80px;
+    max-height: 80px;
+  }
 
-    .upload-avatar{
-        
-    }
+  .ticket-title {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 
-    input[type="text"], input[type="email"], button[type="submit"] {
-        height: 50px;
-        font-size: 20px;
-    }
+  .upload-avatar,
+  .input-group {
+    max-width: 100%;
+  }
 
-    .upload-avatar img{
-        width: 70px;
-    }
+  .upload-avatar {
+  }
 
-    .upload-section span{
-        font-size: 16px;
-    }
+  input[type="text"],
+  input[type="email"],
+  button[type="submit"] {
+    height: 50px;
+    font-size: 20px;
+  }
 
-    .confirm{
-        /* margin-left: 0%; */
-    }
+  .upload-avatar img {
+    width: 70px;
+  }
 
-    .ticket-section h2 span {
-        background: var(--gradient-text); 
-        -webkit-background-clip: text;   
-        background-clip: text; 
-        color: transparent;  
-    }
-    /* .form-section {
+  .upload-section span {
+    font-size: 16px;
+  }
+
+  .confirm {
+    /* margin-left: 0%; */
+  }
+
+  .ticket-section h2 span {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* .form-section {
         padding: 40px;
     }
     .ticket-section {
@@ -536,162 +551,162 @@ button[type="submit"] {
     .upload-avatar img{
         width: 100px;
     } */
-
 }
 
 @media (min-width: 1024px) {
-    body {
-        background: url(assets/images/background-desktop.png); 
-        /* background-size: cover;
+  body {
+    background: url(assets/images/background-desktop.png);
+    /* background-size: cover;
         background-position: center; */
+  }
+
+  .svg-image {
+    position: absolute;
+
+    img {
+      width: 100%;
     }
 
-    .svg-image {
-        position: absolute;
-    
-        img {
-            width: 100%;
-        }
-    
-        &:nth-child(1) {
-            width: 100%;
-            
-        }
-        &:nth-child(2) {
-            width: 40%;
-            top: 10px;
-            right: 0;
-        }
-        &:nth-child(3) {
-            width: 80%;
-            left: 0%;
-            bottom: -50%;
-        }
-        &:nth-child(4) {
-            width: 150px;
-            top: -50px;
-            left: -10px;
-        }
-        &:nth-child(5) {
-            
-            top: 50%;
-            right: 50px;
-        }
+    &:nth-child(1) {
+      width: 100%;
     }
+    &:nth-child(2) {
+      width: 40%;
+      top: 10px;
+      right: 0;
+    }
+    &:nth-child(3) {
+      width: 80%;
+      left: 0%;
+      bottom: -50%;
+    }
+    &:nth-child(4) {
+      width: 150px;
+      top: -50px;
+      left: -10px;
+    }
+    &:nth-child(5) {
+      top: 50%;
+      right: 50px;
+    }
+  }
 
-    .form-section{
-        max-width: 100%;
-        margin: 0 auto;
-    }
+  .form-section {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
-    .form-section h1{
-        font-size: 32px;
-    }
+  .form-section h1 {
+    font-size: 32px;
+  }
 
-    .form-header{
-        max-width: 80%;
-        margin: 0 auto;
-    }
+  .form-header {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-    .upload-avatar,
-    .input-group{
-        max-width: 100%;
-    }
+  .upload-avatar,
+  .input-group {
+    max-width: 100%;
+  }
 
-    .upload-avatar{
-        height: 200px;
-    }
+  .upload-avatar {
+    height: 200px;
+  }
 
-    input[type="text"], input[type="email"], button[type="submit"] {
-        height: 60px;
-        font-size: 20px;
-    }
+  input[type="text"],
+  input[type="email"],
+  button[type="submit"] {
+    height: 60px;
+    font-size: 20px;
+  }
 
-    .upload-avatar img{
-        width: 70px;
-    }
+  .upload-avatar img {
+    width: 70px;
+  }
 
-    .upload-section span{
-        font-size: 16px;
-    }
-    
-    .form-input{
-        max-width: 60%;
-        margin: 0 auto;
-    }
+  .upload-section span {
+    font-size: 16px;
+  }
 
-    .ticket{
-        padding: 20px;
-        gap: 30px;
-        /* background-size: cover; */
-    }
+  .form-input {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 
-    .ticket-number{
-        color: var(--neutral-500);
-        font-size: 18px;
-        font-weight: 500;
-        position: relative;
-        align-items: center;
-        display: flex;
-        right: -42%; 
-        top: 200%;
-        transform: rotate(90deg) ;
-    }
+  .ticket {
+    padding: 20px;
+    gap: 30px;
+    /* background-size: cover; */
+  }
 
-    .ticket-section h2{
-        font-size: 42px;
-        
-    }
+  #ticketAvatar {
+    max-width: 100px;
+    max-height: 100px;
+  }
 
-    .confirm{
-        /* font-size: 20px; */
-        margin-bottom: 70px;
-        text-align: center;
-        color: var(--neutral-300);
-    }
+  .ticket-number {
+    color: var(--neutral-500);
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    align-items: center;
+    display: flex;
+    right: -42%;
+    top: 200%;
+    transform: rotate(90deg);
+  }
+
+  .ticket-section h2 {
+    font-size: 42px;
+  }
+
+  .confirm {
+    /* font-size: 20px; */
+    margin-bottom: 70px;
+    text-align: center;
+    color: var(--neutral-300);
+  }
 }
 
-
 .download-btn {
-    background: var(--orange-700);
-    color: var(--neutral-0);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--orange-700);
+  color: var(--neutral-0);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .download-btn:hover {
-    background: var(--orange-500);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background: var(--orange-500);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .download-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .download-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    fill: var(--neutral-0);
-
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  fill: var(--neutral-0);
 }
 
-
 @media (max-width: 600px) {
-    .download-btn {
+  .download-btn {
     padding: 10px 16px;
     font-size: 14px;
-    }
+  }
 }
